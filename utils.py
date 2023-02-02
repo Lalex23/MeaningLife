@@ -7,9 +7,10 @@ class DisplayResultImage:
     def __init__(self, image):
         cv2.imshow('Image', image)
 
-    def show(self):
+    @staticmethod
+    def show():
         while True:
-            if cv2.waitKey(0): # close window when a key press is detected
+            if cv2.waitKey(0):  # close window when a key press is detected
                 break
 
     def __del__(self):
